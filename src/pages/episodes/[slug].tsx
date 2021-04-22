@@ -2,6 +2,7 @@ import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { api } from '../../services/api';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
 
@@ -29,7 +30,10 @@ export default function Episode({ episode }: EpisodeProps){
     <div className={styles.episode}>
       <div className={styles.thumbnailContainer}>
         <button type="button">
-        <img src="/arrow-left.svg" alt="Voltar"/> 
+          <Link href="/">
+            <img src="/arrow-left.svg" alt="Voltar"/> 
+          </Link>
+        
         </button>
         <Image 
         width={700} 
@@ -49,7 +53,7 @@ export default function Episode({ episode }: EpisodeProps){
          <span>{episode.durationAsString}</span>
       </header> 
 
-      <div className={styles.description} dangerouslySetInnerHTML={{ __html: episode.description }} />
+      <div className={styles.description} dangerouslySetInnerHTML = {{__html: episode.description }} />
     </div>
   )
 }
@@ -70,10 +74,11 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     title: data.title,
     thumbnail: data.thumbnail,
     members: data.members,
-    publishedAt: format(parseISO(data.published_at), 'd MMM yy', {locale: ptBR}),      
+    publishedAt: format(parseISO(data.published_at), 'd MMM yy', { locale: ptBR }),
     duration: Number(data.file.duration),
     durationAsString: convertDurationToTimeString(Number(data.file.duration)),
-    url: data.file.url
+    description: data.description,
+    utl: data.file.url
   }
   
   return{
