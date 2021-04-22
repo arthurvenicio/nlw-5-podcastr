@@ -112,7 +112,7 @@
     }
 
     &:hover:not(:disabled){
-      filter: brightness(0.9)
+      filter: brightness(0.9);
     }
 
     &.playButton{
