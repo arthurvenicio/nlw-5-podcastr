@@ -1,3 +1,5 @@
+// LIGHT MODE
+
 .headerContainer {
   background: var(--white);
   height: 6.5em;
@@ -9,14 +11,76 @@
 
   border-bottom: 1px solid var(--gray-100);
   p {
-
     margin-left: 2rem;
     padding: 0.25rem 0 0.25rem 2rem;
     border-left: 1px solid var(--gray-100);
   }
   span{
+    margin-left: 10px;
+    text-transform: capitalize; 
     margin-left: auto;
-    text-transform: capitalize;
   }
+
+  button{
+    border: none;
+  }
+  
+  .buttonTheme{
+   font-size: 0;
+   padding-left: 1.75rem;
+   transition: opacity 3s ease-in-out;
+  }
+  .buttonTheme:hover{
+    opacity: 0.5;
+  }
+  .buttonChangeTheme{
+    cursor: pointer;
+  }
+
+  
 }
 
+// DARK MODE
+
+.darkHeaderContainer {
+  background: #492796;
+  height: 6.5em;
+  display: flex;
+  align-items: center;
+  padding: 2rem 4rem;
+  border-bottom: 1px solid var(--gray-100);
+  color : var(--gray-100);
+
+  p {
+    margin-left: 2rem;
+    padding: 0.25rem 0 0.25rem 2rem;
+    border-left: 1px solid var(--gray-100);
+  }
+  span{
+    margin-left: 10px;
+    text-transform: capitalize; 
+    margin-left: auto;
+  }
+
+  button{
+    border: none;
+  }
+
+
+  img {
+    filter: brightness(2);
+    transition: filter 0.3s;
+  &:hover {
+    filter: brightness(1);
+  }
+}
+  .buttonTheme{
+   font-size: 0;
+   padding-left: 1.75rem;
+  }
+  
+  .buttonChangeTheme{
+    cursor: pointer;
+  }
+  
+}

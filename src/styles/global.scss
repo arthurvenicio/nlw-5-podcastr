@@ -22,13 +22,13 @@
   --purple-800: #6F48C9;
 }
 
-body{
-  background-color: var(--gray-50);
+body{ 
+    background-color: var(--gray-50);
 }
 
 body, input, textarea, button{
-  font: 500 1rem  Inter, sans-serif;
-  color: var(--gray-500);
+    font: 500 1rem  Inter, sans-serif;
+    color: var(--gray-500);
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -47,6 +47,7 @@ button{
   cursor: pointer;
 }
 
+// CREATING SOME MEDIA QUERYS
 @media (max-width:1080px){
   html{
     font-size: 93.75%;

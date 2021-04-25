@@ -5,19 +5,25 @@ import { Player } from '../components/Player';
 
 import styles from '../styles/app.module.scss'
 import { PlayerContextProvider } from '../contexts/PlayerContext';
+import { ChangeModeProvider } from '../contexts/DarkMode';
 
 function MyApp({ Component, pageProps }) {
    return(
+   <ChangeModeProvider >
       <PlayerContextProvider>
-         <div className={styles.wrapper}>
+         
+           <div className={styles.wrapper}>
               <main>
                 <Header />
               <Component {...pageProps} />
               </main>
               <Player />
-          </div>
+          </div> 
+         
+         
       </PlayerContextProvider>
-   )  
+   </ChangeModeProvider>
+   )
 }
 
 export default MyApp

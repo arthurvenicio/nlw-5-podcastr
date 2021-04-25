@@ -6,6 +6,8 @@ import Slider from 'rc-slider';
 
 import 'rc-slider/assets/index.css';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
+import { useMode } from '../../contexts/DarkMode';
+
 export function Player(){
   const audioRef = useRef<HTMLAudioElement>(null);
   const [progress, setProgress] = useState(0);
@@ -26,6 +28,8 @@ export function Player(){
     hasPrevious,
     clearPlayerState
   } = usePlayer()
+
+  const { isDark } = useMode();
 
   useEffect(() => {
     if(!audioRef.current){
@@ -62,7 +66,7 @@ export function Player(){
   const episode = episodeList[currentEpisodeIndex];
 
   return (
-    <div className={styles.playerContainer}>
+    <div className={isDark ? styles.container : styles.darkContainer}>
       <header>
         <img src="playing.svg" alt="Tocando Agora"/>
         <strong>Tocando Agora</strong>
@@ -79,7 +83,7 @@ export function Player(){
           <span>{episode.members}</span>
         </div>
       ):(
-      <div className={styles.emptyPlayer}>
+      <div className={isDark ? styles.emptyPlayer : styles.darkEmptyPlayer}>
       <strong>Selecione um podcast para ouvir</strong>
     </div>)}
 
