@@ -5,6 +5,8 @@
 # Projeto
 Projeto realizado durante a 5° edição da NLW, promovida pela [Rocketseat](https://rocketseat.com.br/) na trilha de REACT JS, tendo como foco principal a criação de uma aplicação web para um podcast!
 
+# Resultado final online da aplicação 
+[Podcastr](https://nlw-5-podcastr-47mg40d07-arthurvenicio.vercel.app/)
 ## Tecnoligas e linguagens usadas
 
 - React
