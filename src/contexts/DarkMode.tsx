@@ -12,7 +12,7 @@ type ChangeModeProviderProps = {
 export const ChangeMode = createContext({} as ChangeModeData);
 
 export function ChangeModeProvider ({children} : ChangeModeProviderProps ){
-  const [isDark, setIsDark] = useState (false);
+  const [isDark, setIsDark] = useState (true);
 
   function toggleDarkMode () {
     setIsDark(!isDark);
