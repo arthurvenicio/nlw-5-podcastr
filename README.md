@@ -2,7 +2,7 @@
     <img src="public/logo.svg" alt="PODCASTR - NLW 5">
 </div>
 
-![Podcastr preview](.github/project-preview-preview.png)
+![Podcastr preview](.github/project-preview.gif)
 
 # The Project
 Projeto realizado durante a 5° edição da NLW, promovida pela [Rocketseat](https://rocketseat.com.br/) na trilha de REACT JS, tendo como foco principal a criação de uma aplicação web para um podcast!
@@ -32,6 +32,6 @@ Projeto realizado durante a 5° edição da NLW, promovida pela [Rocketseat](htt
   - Run the web server with `yarn dev`.
   - The app will be available for access on your browser at [`http://localhost:3000`](http://localhost:3000)
 
-  <h4 align="center">
-  [PT-BR](./README-pt.md)
-  </h4>
+---
+[PT-BR](https://github.com/arthurvenicio/nlw-5-podcastr/blob/main/README-pt.md)
+
